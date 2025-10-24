@@ -229,6 +229,7 @@ export default css`
     background-position: center;
     background-size: 22em;
     position: relative;
+    --mdc-menu-surface-z-index: 2000; /* Ensure menu appears above all card elements in iOS */
   }
   .player-card-expressive {
     background-color: var(--md-sys-color-background);
