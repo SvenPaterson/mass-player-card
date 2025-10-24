@@ -212,13 +212,11 @@ export default css`
     --control-select-menu-padding: 7px;
     --mdc-icon-size: 1.5em;
     --control-select-menu-height: 2.5em;
-   /* Previously forced stacking to work around iOS Safari issues. Commented out so we can
-     test fixedMenuPosition approach first. If needed, uncomment these lines. */
    /* Ensure the menu control and its overlay stack above artwork/header */
-   /* position: relative; */
-   /* z-index: 2000; */
+   position: relative;
+   z-index: 2000;
    /* Explicitly raise MWC menu-surface (used by ha-control-select-menu) */
-   /* --mdc-menu-surface-z-index: 2000; */
+   --mdc-menu-surface-z-index: 2000;
   }
   .menu-header-expressive::part(menu-select-menu) {
     background-color: var(--md-sys-color-secondary-container) !important;
@@ -308,13 +306,12 @@ export default css`
     --ha-ripple-color: rgba(0,0,0,0);
   }
   /* Raise the players / grouped players menu overlay to top of stack on mobile/iOS */
-  /* Raise the players / grouped players menu overlay to top of stack on mobile/iOS
-     (commented out so we can test fixedMenuPosition first). */
+  /* Raise the players / grouped players menu overlay to top of stack on mobile/iOS */
   #players-select-menu::part(menu-select-menu), #grouped-players-menu::part(menu-select-menu) {
-    /* position: relative; */
-    /* z-index: 2000; */
+    position: relative;
+    z-index: 2000;
     /* Also raise the underlying mwc-menu-surface to avoid iOS/Safari stacking quirks */
-    /* --mdc-menu-surface-z-index: 2000; */
+    --mdc-menu-surface-z-index: 2000;
   }
   #players-select-menu::part(menu-list-item) {
   }

@@ -443,7 +443,7 @@ class MusicPlayerCard extends LitElement {
           class="menu-header ${this.cardConfig.expressive ? `menu-header-expressive` : ``}"
           .iconPath=${this.Icons.SPEAKER_MULTIPLE}
           naturalMenuWidth
-          fixedMenuPosition
+          <!-- fixedMenuPosition -->
         >
         ${this.renderGroupedVolume()}
         ${this.renderGroupedPlayers()}
@@ -515,7 +515,7 @@ class MusicPlayerCard extends LitElement {
           id="players-select-menu"
           class="menu-header ${this.cardConfig.expressive ? `menu-header-expressive` : ``}"
           .iconPath=${this.Icons.SPEAKER}
-          fixedMenuPosition
+          <!-- fixedMenuPosition -->
           .onSelectAction=${this.onPlayerSelect}
           .initialSelection=${this.activeEntity.entity_id}
           .items=${this.renderPlayerItems()}
