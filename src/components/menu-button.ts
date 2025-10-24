@@ -20,7 +20,7 @@ import { jsonMatch } from "../utils/util.js";
 class MassMenuButton extends LitElement {
   @property( { attribute: false }) public iconPath!: string;
   @property( { attribute: false }) private _items!: ListItems;
-  @property( { type: Boolean, attribute: "fixedMenuPosition" }) public fixedMenuPosition!: boolean;
+  @property( { type: Boolean, attribute: "fixedMenuPosition" }) public fixedMenuPosition = false;
   @consume({ context: useExpressiveContext, subscribe: true }) private useExpressive!: boolean;
   public onSelectAction!: TargetValEvent; 
   @state() private _selectedItem!: string;
