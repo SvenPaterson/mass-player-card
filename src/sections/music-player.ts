@@ -442,6 +442,7 @@ class MusicPlayerCard extends LitElement {
           id="grouped-players-menu"
           class="menu-header ${this.cardConfig.expressive ? `menu-header-expressive` : ``}"
           .iconPath=${this.Icons.SPEAKER_MULTIPLE}
+          fixedMenuPosition
           naturalMenuWidth
         >
         ${this.renderGroupedVolume()}
@@ -517,6 +518,7 @@ class MusicPlayerCard extends LitElement {
           .onSelectAction=${this.onPlayerSelect}
           .initialSelection=${this.activeEntity.entity_id}
           .items=${this.renderPlayerItems()}
+          fixedMenuPosition
         ></mass-menu-button>
       </span>
     `
