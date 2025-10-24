@@ -5,16 +5,6 @@ export default css`
     --me-menu-text-color: var(--md-sys-color-on-secondary-container);
     --mass-menu-selected-background-color: var(--md-sys-color-secondary);
     --mass-menu-selected-text-color: var(--md-sys-color-on-secondary);
-    position: relative;
-    z-index: 2000;
-  }
-  
-  ha-control-select-menu {
-    position: relative;
-    z-index: 2000;
-    transform-style: preserve-3d;
-    transform: translateZ(0);
-    -webkit-transform: translateZ(0);
   }
   .menu-expressive {
   --mdc-theme-text-primary-on-background: var(--me-menu-text-color);

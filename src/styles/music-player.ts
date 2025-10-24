@@ -191,20 +191,18 @@ export default css`
   }
 
   .media-controls {
+    backdrop-filter: blur(3px);
     background: var(--player-blur-color);
     position: absolute;
     bottom: 0;
     width: 100%;
-    z-index: 1;
   }
   
   .media-controls:not(.media-controls-expressive) {
     background: linear-gradient(transparent, var(--player-blur-color) 10%) !important;
-    backdrop-filter: blur(3px);
   }
   .media-controls-expressive {
     background: linear-gradient(transparent, var(--expressive-player-blur-color) 10%) !important;
-    backdrop-filter: blur(3px);
   }
 
   .menu-header::part(menu-select-menu) {
@@ -231,7 +229,13 @@ export default css`
     background-position: center;
     background-size: 22em;
     position: relative;
-    --mdc-menu-surface-z-index: 2000; /* Ensure menu appears above all card elements in iOS */
+  }
+
+  /* Target iOS Safari specifically */
+  @supports (-webkit-touch-callout: none) {
+    ha-control-select-menu {
+      --mdc-menu-surface-z-index: 2000;
+    }
   }
   .player-card-expressive {
     background-color: var(--md-sys-color-background);
@@ -246,15 +250,12 @@ export default css`
   }
   .player-card-header {
     background: linear-gradient(var(--player-blur-color) 90%, transparent) !important;
-    position: relative;
   }
   .player-card-header-expressive {
     background: linear-gradient(var(--expressive-player-blur-color) 90%, transparent) !important;
-    position: relative;
   }
   .player-card-header, .player-card-header-expressive {
     backdrop-filter: blur(3px);
-    z-index: 1;
   }
   .player-header {
     margin: 0em 1.75em 0em 1.75em;
