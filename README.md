@@ -45,9 +45,9 @@ In addition to the Music Assistant integration, this card depends on the custom 
 
 ### Manual Installation
 1. Download the card.
-    - Navigate to the Releases and locate the latest release.
-    - Download `mass-card.js`
-    - Save `mass-card.js` to your Home Assistant `<config>/www` directory
+    - Navigate to the Releases and locate the latest release, **or** use the pre-built file stored at `release/mass-player-card.js` in this repository.
+    - Download `mass-player-card.js`
+    - Save `mass-player-card.js` to your Home Assistant `<config>/www` directory
 2. Add card to your HA resources
     - Go to your Home Assistant Settings.
     - Select "Dashboards"
